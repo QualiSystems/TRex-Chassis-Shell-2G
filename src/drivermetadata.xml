@@ -1,0 +1,7 @@
+<Driver Description="Autoload driver for TRex chassis" MainClass="driver.TRexChassisDriver"
+        Name="TRexChassisDriver" Version="1.0.0">
+    <Layout>
+        <Command Name="get_inventory" DisplayName="Autoload" Tags="" Description="Import device into the CloudShell">
+        </Command>
+    </Layout>
+</Driver>

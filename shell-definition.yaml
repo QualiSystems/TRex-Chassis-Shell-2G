@@ -1,0 +1,42 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  template_name: TRex Chassis Shell 2G
+  template_author: Quali
+  template_version: 0.1.0
+  template_icon: shell-icon.png
+
+description: >
+ Sample TOSCA based shell
+
+imports:
+  - cloudshell_standard: cloudshell_traffic_generator_chassis_standard_1_0_3.yaml
+
+node_types:
+  vendor.Traffic TRex 2G:
+    derived_from: cloudshell.nodes.TrafficGeneratorChassis
+    properties:
+      TRex Server Path:
+        type: string
+        default: ""
+        description: The path in which the TRex Server client is installed. For example "/home/trex/v2.36".
+    capabilities:
+      auto_discovery_capability:
+        type: cloudshell.capabilities.AutoDiscovery
+        properties:
+          TRex Server Path:
+            description: The path in which the TRex Server client is installed. For example "/home/trex/v2.36".
+            type: string
+          User:
+            description: User with administrative privileges
+            type: string
+          Password:
+            description: The password is required by some CLI protocols such as Telnet and is required according to the device configuration.
+            type: cloudshell.datatypes.Password
+    artifacts:
+      icon:
+        file: shell-icon.png
+        type: tosca.artifacts.File
+      driver:
+        file: TrexChassisShell2GDriver.zip
+        type: tosca.artifacts.File
