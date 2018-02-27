@@ -10,7 +10,7 @@ description: >
  Sample TOSCA based shell
 
 imports:
-  - cloudshell_standard: cloudshell_traffic_generator_chassis_standard_1_0_3.yaml
+  - cloudshell_standard: cloudshell_traffic_generator_chassis_standard_1_0_2.yaml
 
 node_types:
   vendor.Traffic TRex 2G:
