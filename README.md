@@ -61,6 +61,7 @@ Release: **Cisco TRex Shells**
 
 ▪ Cisco TRex server versions: 2.35 and above
 
+**Note:** If your CloudShell version does not support this shell, you should consider upgrading to a later version of CloudShell or contact customer support.
 
 ### Data Model
 
