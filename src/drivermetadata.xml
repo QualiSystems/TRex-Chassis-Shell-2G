@@ -1,7 +1,6 @@
-<Driver Description="Autoload driver for TRex chassis" MainClass="driver.TRexChassisDriver"
-        Name="TRexChassisDriver" Version="1.0.0">
+<Driver Description="TRex Chassis 2G Shell" MainClass="trex_driver.TrexChassisShell2GDriver" Name="TRex Chassis 2G Shell" Version="3.0.0" PythonVersion="3">
     <Layout>
-        <Command Name="get_inventory" DisplayName="Autoload" Tags="" Description="Import device into the CloudShell">
+        <Command Description="Import device into Cloudshell" DisplayName="Autoload" Name="get_inventory" Tags="">
         </Command>
     </Layout>
 </Driver>
