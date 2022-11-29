@@ -8,7 +8,7 @@ imports:
 metadata:
   template_author: Quali
   template_name: TRex Chassis Shell 2G
-  template_version: 3.0.0
+  template_version: 3.0.1
   template_icon: shell-icon.png
 
 node_types:
