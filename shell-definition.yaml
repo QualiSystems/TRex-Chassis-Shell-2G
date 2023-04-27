@@ -8,16 +8,19 @@ imports:
 metadata:
   template_author: Quali
   template_name: TRex Chassis Shell 2G
-  template_version: 3.0.1
+  template_version: 3.0.2
   template_icon: shell-icon.png
 
 node_types:
   vendor.TRex Chassis Shell 2G:
     derived_from: cloudshell.nodes.TrafficGeneratorChassis
-    properties:
-      User:
-        type: string
-        default: admin
+    capabilities:
+      auto_discovery_capability:
+        type: cloudshell.capabilities.AutoDiscovery
+        properties:
+          User:
+            type: string
+            default: admin
     artifacts:
       icon:
         file: shell-icon.png

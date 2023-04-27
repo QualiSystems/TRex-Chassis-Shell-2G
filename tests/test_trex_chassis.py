@@ -7,21 +7,23 @@ from typing import Iterable
 import pytest
 import yaml
 from _pytest.fixtures import SubRequest
-from cloudshell.api.cloudshell_api import AttributeNameValue, CloudShellAPISession, ResourceInfo
+from cloudshell.api.cloudshell_api import (
+    AttributeNameValue,
+    CloudShellAPISession,
+    ResourceInfo,
+)
 from cloudshell.shell.core.driver_context import AutoLoadCommandContext
 from cloudshell.traffic.tg import TGN_CHASSIS_FAMILY, TREX_CHASSIS_MODEL
-from shellfoundry_traffic.test_helpers import TgTestHelpers, print_inventory, session, test_helpers  # noqa: F401
+from shellfoundry_traffic.test_helpers import (  # noqa: F401
+    TgTestHelpers,
+    print_inventory,
+    session,
+    test_helpers,
+)
 
 from trex_driver import TrexChassisShell2GDriver
 
 TREX_USER = "trex"
-
-
-@pytest.fixture(scope="session")
-def sut(request: SubRequest) -> dict:
-    """Yield the sut dictionary from the sut file."""
-    with open(request.config.rootpath.joinpath(request.config.getoption("--tgn-sut")), "r") as yaml_file:
-        return yaml.safe_load(yaml_file)
 
 
 @pytest.fixture(params=["quali_sut.yaml"], ids=["linux"])
