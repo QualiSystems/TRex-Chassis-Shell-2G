@@ -4,11 +4,19 @@ TRex chassis shell driver.
 import logging
 
 from cloudshell.logging.qs_logger import get_qs_logger
-from cloudshell.shell.core.driver_context import AutoLoadDetails, InitCommandContext, ResourceCommandContext
+from cloudshell.shell.core.driver_context import (
+    AutoLoadDetails,
+    InitCommandContext,
+    ResourceCommandContext,
+)
 from cloudshell.shell.core.resource_driver_interface import ResourceDriverInterface
 from pytrex.trex_app import TrexApp, TrexServer
 
-from trex_data_model import GenericTrafficGeneratorModule, GenericTrafficGeneratorPort, TrexChassisShell2G
+from trex_data_model import (
+    GenericTrafficGeneratorModule,
+    GenericTrafficGeneratorPort,
+    TrexChassisShell2G,
+)
 
 
 class TrexChassisShell2GDriver(ResourceDriverInterface):
